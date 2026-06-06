@@ -3,209 +3,92 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pupilens | Atendimento que vende mais valor agregado</title>
-  <meta name="description" content="Transforme o atendimento da sua ótica em uma experiência visual, consultiva e vendedora com o Pupilens." />
-  <meta name="theme-color" content="#080821" />
-  <meta property="og:title" content="Pupilens | Atendimento que vende mais" />
-  <meta property="og:description" content="Mostre valor antes do preço. Demonstre lentes, tratamentos e comparativos direto no tablet." />
+  <title>Pupilens | Demonstre valor e venda mais lentes</title>
+  <meta name="description" content="Com o Pupilens, sua ótica transforma o atendimento em uma experiência visual que ajuda o cliente a entender, comparar e escolher lentes de maior valor agregado." />
+  <meta property="og:title" content="Pupilens | Demonstre valor e venda mais lentes" />
+  <meta property="og:description" content="Demonstração visual, comparativo de lentes, padronização de atendimento e integração com Kero Ótica." />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.pupilens.com.br/wp-content/uploads/2025/08/demonstrativo-de-lentes.png" />
+  <link rel="icon" href="https://www.pupilens.com.br/wp-content/uploads/2024/03/Logo-Pupilens-azul-150x150.png" sizes="32x32" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root{
-      --ink:#080821;
-      --ink-2:#171738;
-      --muted:#66667a;
-      --soft:#f5f3ff;
-      --soft-2:#eef2ff;
-      --white:#fff;
-      --blue:#3157ff;
-      --purple:#7d49ff;
-      --cyan:#21d4fd;
-      --green:#22c55e;
-      --danger:#ef4444;
+      --blue:#1f43ff;
+      --blue-900:#06115e;
+      --blue-800:#0b1b85;
+      --blue-700:#1434c8;
+      --salmon:#E01E5A;
+      --salmon-2:#ff6a8f;
+      --mint:#E0F6CA;
+      --green:#35897E;
+      --ink:#101828;
+      --muted:#667085;
+      --line:#e6e9f2;
+      --bg:#f7f9ff;
+      --white:#ffffff;
+      --shadow:0 24px 70px rgba(6,17,94,.14);
       --radius:28px;
-      --shadow:0 24px 80px rgba(8,8,33,.14);
+      --radius-sm:18px;
+      --max:1180px;
     }
-
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      color:var(--ink);
-      background:#fff;
-      line-height:1.45;
-    }
-    a{color:inherit;text-decoration:none}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.5;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
     img{max-width:100%;display:block}
-    .container{width:min(1160px,calc(100% - 40px));margin-inline:auto}
-    .pill{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:8px 14px;border-radius:999px;
-      background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.18);
-      color:#fff;font-size:13px;font-weight:700;letter-spacing:.01em;
-    }
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:10px;
-      min-height:52px;padding:0 22px;border-radius:999px;
-      font-weight:800;border:0;cursor:pointer;transition:.2s ease;
-      font-size:15px;
-    }
-    .btn-primary{background:#fff;color:var(--ink);box-shadow:0 16px 32px rgba(0,0,0,.16)}
-    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 22px 44px rgba(0,0,0,.22)}
-    .btn-dark{background:var(--ink);color:#fff}
-    .btn-dark:hover{transform:translateY(-2px);box-shadow:0 18px 34px rgba(8,8,33,.2)}
-    .btn-soft{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);color:#fff}
-    .section{padding:92px 0}
-    .section-soft{background:linear-gradient(180deg,#fbfbff 0%,#f2f0ff 100%)}
-    .eyebrow{font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:.14em;color:var(--purple);margin:0 0 14px}
-    h1,h2,h3,p{margin-top:0}
-    h1{font-size:clamp(42px,7vw,82px);line-height:.94;letter-spacing:-.07em;margin-bottom:24px;color:#fff}
-    h2{font-size:clamp(34px,4.8vw,60px);line-height:1;letter-spacing:-.055em;margin-bottom:18px}
-    h3{font-size:22px;line-height:1.12;letter-spacing:-.03em;margin-bottom:10px}
-    .lead{font-size:clamp(18px,2vw,22px);color:rgba(255,255,255,.8);max-width:680px;margin-bottom:32px}
-    .sublead{font-size:18px;color:var(--muted);max-width:720px;margin-bottom:34px}
-
-    header{
-      position:fixed;inset:16px 0 auto;z-index:20;pointer-events:none;
-    }
-    .nav{
-      pointer-events:auto;display:flex;align-items:center;justify-content:space-between;
-      min-height:64px;padding:10px 12px 10px 18px;border-radius:999px;
-      background:rgba(255,255,255,.82);backdrop-filter:blur(20px);
-      box-shadow:0 12px 50px rgba(8,8,33,.08);border:1px solid rgba(255,255,255,.7)
-    }
-    .logo{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.04em;font-size:20px}
-    .logo-mark{width:34px;height:34px;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--purple));display:grid;place-items:center;color:#fff;font-weight:900}
-    .nav-links{display:flex;align-items:center;gap:24px;color:var(--muted);font-size:14px;font-weight:700}
-
-    .hero{
-      position:relative;overflow:hidden;min-height:100vh;padding:140px 0 80px;
-      background:
-        radial-gradient(circle at 80% 10%,rgba(33,212,253,.34),transparent 28%),
-        radial-gradient(circle at 15% 80%,rgba(125,73,255,.38),transparent 32%),
-        linear-gradient(135deg,#07071f 0%,#10104b 48%,#35237d 100%);
-    }
-    .hero::before{
-      content:"";position:absolute;inset:0;opacity:.16;
-      background-image:linear-gradient(rgba(255,255,255,.16) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.16) 1px,transparent 1px);
-      background-size:64px 64px;mask-image:linear-gradient(to bottom,#000,transparent 86%);
-    }
-    .hero-grid{position:relative;display:grid;grid-template-columns:1.02fr .98fr;gap:54px;align-items:center}
-    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
-    .hero-badges{display:flex;flex-wrap:wrap;gap:10px}
-    .mockup-wrap{position:relative;min-height:600px}
-    .tablet{
-      position:absolute;right:0;top:34px;width:min(520px,100%);padding:18px;border-radius:42px;
-      background:linear-gradient(145deg,#25253b,#0a0a19);box-shadow:0 50px 120px rgba(0,0,0,.42), inset 0 0 0 1px rgba(255,255,255,.08);
-      transform:rotate(2deg);
-    }
-    .tablet-screen{border-radius:28px;background:#f8f8ff;overflow:hidden;min-height:560px;position:relative}
-    .app-top{height:70px;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 24px;border-bottom:1px solid #eeeef8}
-    .app-brand{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--ink)}
-    .app-dot{width:30px;height:30px;border-radius:10px;background:linear-gradient(135deg,var(--blue),var(--purple))}
-    .app-chip{padding:8px 12px;border-radius:999px;background:#eef2ff;color:#3b42a0;font-size:12px;font-weight:800}
-    .lens-area{padding:26px;display:grid;gap:16px}
-    .compare{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    .lens-card{border-radius:22px;background:#fff;padding:18px;box-shadow:0 12px 30px rgba(8,8,33,.08)}
-    .lens-card strong{display:block;font-size:14px;margin-bottom:12px}
-    .lens-visual{height:178px;border-radius:18px;background:linear-gradient(180deg,#eef2ff,#fff);position:relative;overflow:hidden}
-    .lens-visual::after{content:"";position:absolute;inset:30px 16px;border-radius:50%;background:radial-gradient(ellipse at center,rgba(49,87,255,.05),rgba(49,87,255,.28),rgba(8,8,33,.7));filter:blur(.2px)}
-    .lens-card:nth-child(2) .lens-visual::after{background:radial-gradient(ellipse at center,rgba(34,197,94,.04),rgba(34,197,94,.14),rgba(8,8,33,.28))}
-    .slider-demo{background:linear-gradient(135deg,#10104b,#3157ff);border-radius:24px;padding:20px;color:#fff;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}
-    .slider-line{height:10px;background:rgba(255,255,255,.2);border-radius:999px;position:relative;margin-top:14px}
-    .slider-line::after{content:"";position:absolute;left:0;top:0;bottom:0;width:68%;border-radius:999px;background:#fff}
-    .floating-card{position:absolute;left:0;bottom:70px;width:280px;background:#fff;border-radius:26px;padding:22px;box-shadow:var(--shadow);transform:rotate(-5deg)}
-    .floating-card b{font-size:36px;letter-spacing:-.06em;color:var(--green)}
-    .floating-card span{display:block;color:var(--muted);font-weight:700}
-
-    .problem-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:54px;align-items:center}
-    .pain-list{display:grid;gap:14px}
-    .pain{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #eeeeff;border-radius:22px;padding:18px;box-shadow:0 16px 40px rgba(8,8,33,.05)}
-    .pain-icon{width:32px;height:32px;flex:0 0 32px;border-radius:12px;background:#fff1f2;color:var(--danger);display:grid;place-items:center;font-weight:900}
-    .quote-card{border-radius:var(--radius);background:var(--ink);color:#fff;padding:34px;box-shadow:var(--shadow);position:relative;overflow:hidden}
-    .quote-card::after{content:"";position:absolute;right:-60px;bottom:-70px;width:210px;height:210px;background:radial-gradient(circle,var(--purple),transparent 65%);opacity:.6}
-    .quote-card p{font-size:25px;line-height:1.18;font-weight:850;letter-spacing:-.04em;margin:0;position:relative;z-index:1}
-    .quote-card small{display:block;margin-top:18px;color:rgba(255,255,255,.62);font-weight:700;position:relative;z-index:1}
-
-    .features-head{display:flex;justify-content:space-between;gap:36px;align-items:end;margin-bottom:42px}
-    .features-head h2{max-width:690px;margin-bottom:0}
-    .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .feature{background:#fff;border:1px solid #eeeef8;border-radius:26px;padding:26px;box-shadow:0 14px 42px rgba(8,8,33,.06)}
-    .feature-icon{width:44px;height:44px;border-radius:16px;background:linear-gradient(135deg,#eef2ff,#f5f3ff);display:grid;place-items:center;font-size:22px;margin-bottom:22px}
-    .feature p{color:var(--muted);margin-bottom:0}
-
-    .split{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
-    .panel{border-radius:34px;padding:34px;background:#fff;box-shadow:0 16px 50px rgba(8,8,33,.06);border:1px solid #eeeeff}
-    .panel.dark{background:var(--ink);color:#fff;border:0}
-    .check-list,.x-list{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:14px}
-    .check-list li,.x-list li{display:flex;gap:12px;align-items:flex-start;color:var(--muted);font-weight:600}
-    .panel.dark .check-list li{color:rgba(255,255,255,.78)}
-    .check-list li::before{content:"✓";color:var(--green);font-weight:900}
-    .x-list li::before{content:"›";color:var(--danger);font-weight:900;font-size:20px;line-height:1}
-
-    .result-card{background:linear-gradient(135deg,#080821,#22166b);color:#fff;border-radius:40px;padding:52px;display:grid;grid-template-columns:.95fr 1.05fr;gap:42px;align-items:center;overflow:hidden;position:relative}
-    .result-card::after{content:"";position:absolute;right:-130px;top:-130px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,var(--cyan),transparent 70%);opacity:.35}
-    .stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;position:relative;z-index:1}
-    .stat{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:24px;backdrop-filter:blur(10px)}
-    .stat b{display:block;font-size:40px;letter-spacing:-.06em;margin-bottom:4px}
-    .stat span{color:rgba(255,255,255,.72);font-weight:700}
-
-    .audience-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}
-    .audience{border-radius:24px;padding:22px;background:#fff;border:1px solid #eeeeff;font-weight:800;box-shadow:0 14px 36px rgba(8,8,33,.05)}
-    .audience::before{content:"✓";display:inline-grid;place-items:center;width:26px;height:26px;border-radius:10px;background:#ecfdf5;color:var(--green);margin-right:8px}
-
-    .cta{background:linear-gradient(135deg,#080821,#19195d 52%,#4627aa);color:#fff;padding:90px 0;position:relative;overflow:hidden}
-    .cta::before{content:"";position:absolute;left:-120px;bottom:-180px;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,var(--cyan),transparent 68%);opacity:.38}
-    .cta-grid{position:relative;display:grid;grid-template-columns:.95fr 1.05fr;gap:52px;align-items:center}
-    .cta h2{color:#fff}
-    .cta .sublead{color:rgba(255,255,255,.72)}
-    form{background:#fff;border-radius:34px;padding:28px;box-shadow:0 34px 100px rgba(0,0,0,.24)}
-    form h3{font-size:28px;color:var(--ink)}
-    form p{color:var(--muted);margin-bottom:22px}
-    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    label{display:block;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;color:#77778c;margin-bottom:7px}
-    input,select,textarea{width:100%;border:1px solid #e5e7f5;background:#fbfbff;border-radius:16px;min-height:50px;padding:0 14px;font:inherit;color:var(--ink);outline:none}
-    textarea{padding:14px;min-height:92px;resize:vertical}
-    input:focus,select:focus,textarea:focus{border-color:var(--purple);box-shadow:0 0 0 4px rgba(125,73,255,.12)}
-    .field-full{grid-column:1/-1}
-    .form-note{font-size:12px;color:#8a8aa0;margin-top:14px;margin-bottom:0}
-    .submit{width:100%;margin-top:14px}
-
-    footer{padding:30px 0;background:#050514;color:rgba(255,255,255,.58);font-size:14px}
-    footer .container{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-
-    @media (max-width: 940px){
-      .nav-links{display:none}
-      .hero-grid,.problem-grid,.result-card,.cta-grid,.split{grid-template-columns:1fr}
-      .mockup-wrap{min-height:520px}.tablet{position:relative;top:0}.floating-card{left:20px;bottom:10px}
-      .feature-grid{grid-template-columns:1fr 1fr}.audience-grid{grid-template-columns:1fr 1fr}.features-head{display:block}
-    }
-    @media (max-width: 640px){
-      .container{width:min(100% - 28px,1160px)}.section{padding:70px 0}.hero{padding-top:118px}
-      .feature-grid,.audience-grid,.stats,.form-grid{grid-template-columns:1fr}
-      .tablet{padding:10px;border-radius:30px}.tablet-screen{border-radius:22px;min-height:480px}.compare{grid-template-columns:1fr}.lens-visual{height:120px}
-      .floating-card{position:relative;width:100%;left:auto;bottom:auto;margin-top:18px;transform:none}
-      .result-card,.cta-grid form,.panel{padding:24px}.nav{border-radius:24px}.logo{font-size:18px}
-    }
+    .container{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
+    .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:blur(18px);border-bottom:1px solid rgba(230,233,242,.8)}
+    .nav-inner{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900;color:var(--blue-900);font-size:1.15rem;letter-spacing:-.03em}
+    .brand img{width:42px;height:auto}
+    .nav-links{display:flex;align-items:center;gap:28px;color:#394150;font-size:.96rem;font-weight:700}
+    .nav-links a:hover{color:var(--blue)}
+    .cta,.cta-secondary{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;font-weight:900;transition:.2s ease;white-space:nowrap}
+    .cta{background:linear-gradient(135deg,var(--salmon),var(--salmon-2));color:white;padding:15px 22px;box-shadow:0 16px 36px rgba(224,30,90,.28)}
+    .cta:hover{transform:translateY(-2px);box-shadow:0 22px 42px rgba(224,30,90,.34)}
+    .cta-secondary{color:var(--blue-900);background:white;border:1px solid var(--line);padding:14px 20px;box-shadow:0 12px 34px rgba(6,17,94,.08)}
+    .hero{position:relative;isolation:isolate;padding:74px 0 70px;background:radial-gradient(circle at 15% 18%, rgba(224,30,90,.18), transparent 28%), radial-gradient(circle at 85% 12%, rgba(31,67,255,.22), transparent 28%), linear-gradient(180deg,#fff 0%,#eff4ff 100%)}
+    .hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(31,67,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(31,67,255,.055) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(to bottom,#000 0%,transparent 88%);z-index:-2}
+    .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:56px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 12px;margin-bottom:22px;color:var(--blue-900);font-size:.86rem;font-weight:900;box-shadow:0 14px 36px rgba(6,17,94,.07)}
+    .dot{width:9px;height:9px;border-radius:50%;background:var(--salmon);box-shadow:0 0 0 7px rgba(224,30,90,.12)}
+    h1{font-size:clamp(2.8rem,6vw,5.9rem);line-height:.94;letter-spacing:-.08em;margin:0 0 24px;color:var(--blue-900)}
+    .highlight{color:var(--salmon)}
+    .lead{font-size:clamp(1.05rem,1.8vw,1.28rem);color:#475467;max-width:630px;margin:0 0 30px}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:28px}
+    .microproof{display:flex;gap:12px;flex-wrap:wrap;color:#344054;font-weight:800;font-size:.92rem}
+    .microproof span{display:inline-flex;align-items:center;gap:7px;background:white;border:1px solid var(--line);border-radius:999px;padding:9px 12px}
+    .hero-visual{position:relative;min-height:570px;display:grid;place-items:center}
+    .phone-frame{position:relative;width:min(410px,100%);border-radius:44px;padding:16px;background:linear-gradient(145deg,#172cd2,#06115e);box-shadow:var(--shadow);transform:rotate(2deg)}
+    .phone-frame:after{content:"";position:absolute;inset:18px;border-radius:32px;border:1px solid rgba(255,255,255,.18);pointer-events:none}
+    .phone-frame img{border-radius:32px;background:#fff;min-height:500px;object-fit:cover;object-position:top}
+    .floating{position:absolute;background:#fff;border:1px solid var(--line);box-shadow:0 18px 50px rgba(6,17,94,.13);border-radius:22px;padding:16px;max-width:238px}
+    .floating strong{display:block;color:var(--blue-900);font-size:.96rem;margin-bottom:4px}
+    .floating small{color:var(--muted);font-weight:700}
+    .float-a{left:0;top:70px}.float-b{right:0;bottom:70px}.float-c{left:20px;bottom:8px;background:var(--mint)}
+    .section{padding:92px 0}.section-white{background:white}.section-dark{background:linear-gradient(135deg,var(--blue-900),#132fc6);color:#fff;position:relative;overflow:hidden}.section-dark:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:rgba(224,30,90,.28);filter:blur(25px);right:-180px;top:-220px}.section-dark .container{position:relative}
+    .section-head{max-width:800px;margin:0 auto 44px;text-align:center}.section-head.left{text-align:left;margin-left:0}.kicker{color:var(--salmon);font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;font-weight:900;margin-bottom:12px}.section h2{font-size:clamp(2rem,4vw,4rem);letter-spacing:-.06em;line-height:1.02;margin:0 0 18px;color:var(--blue-900)}.section-dark h2,.section-dark .section-head p{color:#fff}.section-head p{font-size:1.08rem;color:var(--muted);margin:0}
+    .pain-grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:32px;align-items:stretch}.pain-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px;box-shadow:0 12px 34px rgba(6,17,94,.06)}.pain-card.dark{background:var(--blue-900);color:white;border:0}.pain-card h3{font-size:1.55rem;letter-spacing:-.04em;margin:0 0 18px;color:var(--blue-900)}.pain-card.dark h3{color:white}.list{display:grid;gap:13px;margin:0;padding:0;list-style:none}.list li{display:flex;gap:10px;align-items:flex-start;color:#475467;font-weight:700}.pain-card.dark .list li{color:#eef2ff}.x,.check{width:23px;height:23px;border-radius:50%;display:grid;place-items:center;flex:0 0 23px;font-size:.9rem;font-weight:900}.x{background:rgba(224,30,90,.1);color:var(--salmon)}.check{background:var(--mint);color:var(--green)}
+    .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.feature{background:#fff;border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:0 12px 36px rgba(6,17,94,.06);transition:.2s}.feature:hover{transform:translateY(-4px);box-shadow:0 20px 52px rgba(6,17,94,.11)}.icon{width:58px;height:58px;border-radius:18px;background:#eff4ff;display:grid;place-items:center;margin-bottom:18px}.icon img{max-width:40px;max-height:40px}.feature h3{font-size:1.2rem;letter-spacing:-.035em;color:var(--blue-900);margin:0 0 10px}.feature p{color:var(--muted);margin:0;font-weight:600}
+    .product-showcase{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}.visual-card{background:linear-gradient(135deg,#fff,#eef4ff);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);overflow:hidden}.visual-card img{border-radius:18px}.steps{display:grid;gap:16px}.step{display:grid;grid-template-columns:46px 1fr;gap:15px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:22px;padding:18px}.num{width:46px;height:46px;border-radius:15px;background:var(--blue);color:white;display:grid;place-items:center;font-weight:900}.step h3{margin:0 0 4px;color:var(--blue-900);letter-spacing:-.03em}.step p{margin:0;color:var(--muted);font-weight:600}
+    .compare{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:34px}.compare-col{border-radius:26px;padding:28px;background:#fff;color:var(--ink);border:1px solid rgba(255,255,255,.35)}.compare-col.good{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.24);backdrop-filter:blur(12px);color:#fff}.compare-col h3{margin:0 0 18px;font-size:1.45rem;letter-spacing:-.04em;color:inherit}.compare-col li{color:inherit;opacity:.92}
+    .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.metric{background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px;text-align:center;box-shadow:0 12px 36px rgba(6,17,94,.06)}.metric strong{display:block;color:var(--salmon);font-size:3rem;line-height:.95;letter-spacing:-.07em}.metric span{display:block;margin-top:10px;color:var(--blue-900);font-weight:900}.metric p{color:var(--muted);font-weight:600;margin:8px 0 0}
+    .objection{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:34px;padding:34px;box-shadow:var(--shadow)}.objection img{max-height:420px;margin:auto}.quote{font-size:1.15rem;color:#475467;font-weight:700;border-left:5px solid var(--salmon);padding-left:18px;margin:22px 0 0}
+    .final-cta{border-radius:38px;padding:56px;background:linear-gradient(135deg,var(--blue-900),var(--blue));color:#fff;display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;overflow:hidden;position:relative}.final-cta:after{content:"";position:absolute;right:-80px;bottom:-140px;width:360px;height:360px;border-radius:50%;background:rgba(224,30,90,.35);filter:blur(10px)}.final-cta>*{position:relative}.final-cta h2{color:#fff}.form-card{background:white;border-radius:28px;padding:28px;color:var(--ink);box-shadow:0 18px 48px rgba(6,17,94,.18)}.fields{display:grid;gap:12px}.fields input,.fields select,.fields textarea{width:100%;border:1px solid var(--line);border-radius:14px;padding:14px 14px;font:inherit;color:var(--ink);background:#f9fbff}.fields button{border:0;cursor:pointer;width:100%;margin-top:4px}.footer{padding:38px 0;color:#667085;font-weight:600;background:#fff;border-top:1px solid var(--line)}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer a{color:var(--blue-900);font-weight:800}
+    @media (max-width: 980px){.nav-links{display:none}.hero-grid,.pain-grid,.product-showcase,.objection,.final-cta{grid-template-columns:1fr}.hero{padding-top:42px}.hero-visual{min-height:500px}.float-a{left:0}.float-b{right:0}.feature-grid,.metrics{grid-template-columns:1fr}.compare{grid-template-columns:1fr}.section{padding:70px 0}.final-cta{padding:34px}.objection{padding:24px}}
+    @media (max-width: 620px){.container{width:min(100% - 28px,var(--max))}.nav-inner{height:72px}.brand span{display:none}.hero-actions{align-items:stretch}.cta,.cta-secondary{width:100%;padding:15px 18px}.phone-frame{transform:none}.floating{display:none}.hero-visual{min-height:auto;margin-top:30px}.phone-frame img{min-height:auto}.section-head{text-align:left}.pain-card,.compare-col,.feature{padding:22px}.final-cta{border-radius:26px}.form-card{padding:20px}.metric strong{font-size:2.4rem}}
   </style>
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <a href="#top" class="logo" aria-label="Pupilens">
-        <span class="logo-mark">P</span>
-        <span>Pupilens</span>
-      </a>
-      <nav class="nav-links" aria-label="Menu principal">
-        <a href="#problema">Problema</a>
-        <a href="#funciona">Como funciona</a>
-        <a href="#resultados">Resultados</a>
-        <a href="#contato">Contato</a>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Pupilens"><img src="https://www.pupilens.com.br/wp-content/uploads/2024/03/reducao-inicial-sem-registro-azul-71x89.png" alt="Pupilens"><span>Pupilens</span></a>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="#problema">Desafio</a><a href="#produto">Produto</a><a href="#resultado">Resultados</a><a href="#contato">Contato</a>
       </nav>
-      <a class="btn btn-dark" href="#contato">Falar com consultor</a>
+      <a class="cta" href="https://demo.pupilens.com.br/demonstrativo-de-lentes" target="_blank" rel="nofollow noopener">Falar com Consultor</a>
     </div>
   </header>
 
@@ -213,226 +96,149 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <span class="pill">✨ Demonstração visual para óticas</span>
-          <h1>Venda mais valor agregado no balcão da sua ótica.</h1>
-          <p class="lead">Com o Pupilens, sua equipe mostra lentes, tratamentos, espessuras e comparativos de forma visual, simples e interativa — direto no tablet, ao lado do cliente.</p>
+          <div class="eyebrow"><span class="dot"></span> Demonstrativo de lentes para óticas</div>
+          <h1>Mostre valor antes de falar de <span class="highlight">preço</span>.</h1>
+          <p class="lead">O Pupilens transforma a explicação técnica de lentes em uma experiência visual, simples e interativa para o cliente entender, comparar e escolher com mais segurança.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#contato">Quero conhecer o Pupilens</a>
-            <a class="btn btn-soft" href="#funciona">Ver como funciona</a>
+            <a class="cta" href="https://demo.pupilens.com.br/demonstrativo-de-lentes" target="_blank" rel="nofollow noopener">Conhecer agora</a>
+            <a class="cta-secondary" href="#produto">Ver como funciona</a>
           </div>
-          <div class="hero-badges">
-            <span class="pill">🔗 Integrado ao Kero Ótica</span>
-            <span class="pill">📱 Direto no tablet</span>
-            <span class="pill">📈 Mais conversão</span>
+          <div class="microproof">
+            <span>✓ Demonstração visual ao vivo</span><span>✓ Comparativo lado a lado</span><span>✓ Integrado ao Kero Ótica</span>
           </div>
         </div>
-        <div class="mockup-wrap" aria-label="Simulação visual do app Pupilens">
-          <div class="tablet">
-            <div class="tablet-screen">
-              <div class="app-top">
-                <div class="app-brand"><span class="app-dot"></span> Pupilens</div>
-                <div class="app-chip">Comparativo ao vivo</div>
-              </div>
-              <div class="lens-area">
-                <div class="compare">
-                  <div class="lens-card">
-                    <strong>Lente básica</strong>
-                    <div class="lens-visual"></div>
-                  </div>
-                  <div class="lens-card">
-                    <strong>Lente premium</strong>
-                    <div class="lens-visual"></div>
-                  </div>
-                </div>
-                <div class="slider-demo">
-                  <div>
-                    <strong>Antirreflexo + proteção</strong>
-                    <div class="slider-line"></div>
-                  </div>
-                  <span>68%</span>
-                </div>
-                <div class="compare">
-                  <div class="lens-card">
-                    <strong>Espessura</strong>
-                    <div class="lens-visual"></div>
-                  </div>
-                  <div class="lens-card">
-                    <strong>Polarização</strong>
-                    <div class="lens-visual"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="floating-card">
-            <b>3x</b>
-            <span>mais vendas em lentes de maior valor no case apresentado.</span>
-          </div>
+        <div class="hero-visual" aria-label="Imagem do aplicativo Pupilens">
+          <div class="phone-frame"><img src="https://www.pupilens.com.br/wp-content/uploads/2025/08/demonstrativo-de-lentes.png" alt="Tela do demonstrativo de lentes Pupilens"></div>
+          <div class="floating float-a"><strong>Cliente entende</strong><small>Distorções, tratamentos, espessuras e atributos ficam visuais.</small></div>
+          <div class="floating float-b"><strong>Vendedor conduz</strong><small>Menos improviso e mais narrativa consultiva no balcão.</small></div>
+          <div class="floating float-c"><strong>Mais conversão</strong><small>Experiência simples para vender valor agregado.</small></div>
         </div>
       </div>
     </section>
 
-    <section class="section section-soft" id="problema">
-      <div class="container problem-grid">
-        <div>
-          <p class="eyebrow">O problema</p>
-          <h2>Sua equipe sabe vender. O cliente é que nem sempre entende.</h2>
-          <p class="sublead">Quando o cliente não visualiza o valor, ele compara apenas preço. E quando a explicação depende só do discurso do vendedor, a venda trava.</p>
-          <div class="quote-card">
-            <p>Valor agregado não é empurrar produto. É mostrar, com clareza, por que aquela solução faz sentido para o cliente.</p>
-            <small>Pupilens transforma explicação em experiência visual.</small>
-          </div>
+    <section id="problema" class="section section-white">
+      <div class="container pain-grid">
+        <div class="section-head left">
+          <div class="kicker">O problema no balcão</div>
+          <h2>Sua equipe sabe vender. O cliente é que ainda não vê o valor.</h2>
+          <p>Quando o cliente não visualiza a diferença entre as opções, a decisão tende a cair no menor preço. O Pupilens muda esse jogo com apoio visual e narrativa de solução.</p>
         </div>
-        <div class="pain-list">
-          <div class="pain"><span class="pain-icon">!</span><div><strong>Ticket médio travado</strong><br><span>O cliente fica nos produtos básicos porque não percebe a diferença.</span></div></div>
-          <div class="pain"><span class="pain-icon">!</span><div><strong>Vendedor inseguro</strong><br><span>Sem apoio visual, explicar multifocal, tratamento e espessura vira improviso.</span></div></div>
-          <div class="pain"><span class="pain-icon">!</span><div><strong>Atendimento sem padrão</strong><br><span>Cada vendedor e cada filial apresentam a solução de um jeito diferente.</span></div></div>
-          <div class="pain"><span class="pain-icon">!</span><div><strong>Venda baseada em preço</strong><br><span>Se o valor não aparece, o desconto vira o principal argumento.</span></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="funciona">
-      <div class="container">
-        <div class="features-head">
-          <div>
-            <p class="eyebrow">Como funciona</p>
-            <h2>Uma experiência visual para vender solução, não apenas lente e armação.</h2>
-          </div>
-          <p class="sublead">O Pupilens entra no momento certo da venda: durante a conversa, antes do cliente decidir pelo preço.</p>
-        </div>
-        <div class="feature-grid">
-          <article class="feature"><div class="feature-icon">👓</div><h3>Demonstração de lentes</h3><p>Mostre tratamentos, distorções ópticas, filtro azul, antirreflexo, polarização e direção noturna com animações interativas.</p></article>
-          <article class="feature"><div class="feature-icon">⚖️</div><h3>Comparativo lado a lado</h3><p>Compare lentes, marcas, corredores, atributos e preços em uma única tela para facilitar a decisão.</p></article>
-          <article class="feature"><div class="feature-icon">📏</div><h3>Espessura e medidas</h3><p>Ajude o cliente a visualizar estética, conforto, altura, DNP e impacto da escolha no resultado final.</p></article>
-          <article class="feature"><div class="feature-icon">🪞</div><h3>Espelho de armações</h3><p>Fotografe, compare modelos e ajude o cliente a escolher com mais segurança, mesmo com dificuldade para enxergar.</p></article>
-          <article class="feature"><div class="feature-icon">🔗</div><h3>Integração com Kero Ótica</h3><p>Mais agilidade para orçamento, venda, cadastro, tabelas e gestão dentro da operação da ótica.</p></article>
-          <article class="feature"><div class="feature-icon">🎯</div><h3>Venda com narrativa</h3><p>O vendedor mostra valor antes do preço e conduz a venda de forma consultiva, didática e natural.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft">
-      <div class="container">
-        <p class="eyebrow">Antes e depois</p>
-        <h2>Você nota a diferença no primeiro atendimento.</h2>
-        <div class="split">
-          <div class="panel">
-            <h3>Sem o Pupilens</h3>
-            <ul class="x-list">
-              <li>Cliente escolhe pelo menor preço porque não enxerga valor.</li>
-              <li>Vendedor precisa explicar demais e improvisar argumentos.</li>
-              <li>Novos vendedores demoram mais para vender bem.</li>
-              <li>Cada loja apresenta soluções com um discurso diferente.</li>
-              <li>Equipamentos caros são usados só no fim da venda.</li>
-            </ul>
-          </div>
-          <div class="panel dark">
-            <h3>Com o Pupilens</h3>
-            <ul class="check-list">
-              <li>Cliente entende o que está comprando e decide com confiança.</li>
-              <li>Vendedor apresenta valor com apoio visual e mais segurança.</li>
-              <li>Equipe ganha padrão de atendimento em 1 ou 100 lojas.</li>
-              <li>Tratamentos, multifocais e lentes premium ficam mais fáceis de vender.</li>
-              <li>A experiência acontece no balcão, durante a conversa.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="resultados">
-      <div class="container">
-        <div class="result-card">
-          <div>
-            <p class="eyebrow" style="color:#8ddcff">Case apresentado</p>
-            <h2>Quando o cliente entende, ele para de comprar só pelo preço.</h2>
-            <p class="sublead" style="color:rgba(255,255,255,.74)">Em uma ótica que implementou o Pupilens no atendimento de multifocais, a equipe passou a comparar lentes e apresentar opções de maior valor agregado com mais clareza.</p>
-            <a class="btn btn-primary" href="#contato">Quero ver na minha ótica</a>
-          </div>
-          <div class="stats">
-            <div class="stat"><b>6 → 18</b><span>pares vendidos em lente de maior valor no período citado.</span></div>
-            <div class="stat"><b>+R$36k</b><span>em venda bruta adicional relatada no case.</span></div>
-            <div class="stat"><b>Visual</b><span>menos explicação abstrata, mais entendimento.</span></div>
-            <div class="stat"><b>Simples</b><span>baixo custo e uso direto no tablet.</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft">
-      <div class="container">
-        <p class="eyebrow">Para quem é</p>
-        <h2>Ideal para óticas que querem vender mais e melhor.</h2>
-        <p class="sublead">O Pupilens ajuda sua operação a transformar atendimento em experiência, experiência em valor percebido e valor percebido em mais conversão.</p>
-        <div class="audience-grid">
-          <div class="audience">Aumentar ticket médio</div>
-          <div class="audience">Vender mais lentes premium</div>
-          <div class="audience">Padronizar filiais</div>
-          <div class="audience">Treinar vendedores</div>
-          <div class="audience">Reduzir venda por preço</div>
-          <div class="audience">Explicar tratamentos</div>
-          <div class="audience">Modernizar o balcão</div>
-          <div class="audience">Integrar com Kero Ótica</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta" id="contato">
-      <div class="container cta-grid">
-        <div>
-          <p class="eyebrow" style="color:#8ddcff">Próximo passo</p>
-          <h2>Sua ótica pronta para vender mais valor agregado.</h2>
-          <p class="sublead">Conheça o Pupilens e veja como transformar o atendimento da sua equipe em uma experiência visual, consultiva e vendedora.</p>
-          <ul class="check-list">
-            <li>Retorno em até 1 dia útil</li>
-            <li>Demonstração sem compromisso</li>
-            <li>Apresentação personalizada para sua realidade</li>
+        <div class="pain-card">
+          <h3>Sem demonstração visual, a venda fica vulnerável.</h3>
+          <ul class="list">
+            <li><span class="x">×</span>Ticket médio travado nos produtos iniciais.</li>
+            <li><span class="x">×</span>Vendedor inseguro na hora de explicar tratamentos e multifocais.</li>
+            <li><span class="x">×</span>Cliente escolhe por preço porque não percebe o valor.</li>
+            <li><span class="x">×</span>Cada loja ou vendedor cria um discurso diferente.</li>
           </ul>
         </div>
-        <form id="leadForm">
-          <h3>Fale com um consultor</h3>
-          <p>Preencha seus dados para conhecer o Pupilens.</p>
-          <div class="form-grid">
-            <div><label for="nome">Nome</label><input id="nome" name="nome" placeholder="Seu nome" required></div>
-            <div><label for="whatsapp">WhatsApp</label><input id="whatsapp" name="whatsapp" placeholder="(00) 00000-0000" required></div>
-            <div><label for="otica">Nome da ótica</label><input id="otica" name="otica" placeholder="Nome da empresa"></div>
-            <div><label for="cidade">Cidade/Estado</label><input id="cidade" name="cidade" placeholder="Ex.: Curitiba/PR"></div>
-            <div><label for="lojas">Quantidade de lojas</label><select id="lojas" name="lojas"><option value="">Selecione</option><option>1 loja</option><option>2 a 5 lojas</option><option>6 a 20 lojas</option><option>Mais de 20 lojas</option></select></div>
-            <div><label for="kero">Usa Kero Ótica?</label><select id="kero" name="kero"><option value="">Selecione</option><option>Sim</option><option>Não</option><option>Ainda não sei</option></select></div>
-            <div class="field-full"><label for="mensagem">Mensagem</label><textarea id="mensagem" name="mensagem" placeholder="Conte rapidamente sua necessidade"></textarea></div>
+      </div>
+    </section>
+
+    <section id="produto" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Como o Pupilens atua</div>
+          <h2>Uma ferramenta prática para vender solução, não apenas lente e armação.</h2>
+          <p>O vendedor conduz a conversa com apoio visual no tablet, mostra comparações reais e ajuda o cliente a tomar uma decisão mais consciente.</p>
+        </div>
+        <div class="product-showcase">
+          <div class="visual-card"><img src="https://www.pupilens.com.br/wp-content/uploads/2025/10/Telas-Demonstrativo_Pupilens.png" alt="Telas do demonstrativo Pupilens"></div>
+          <div class="steps">
+            <div class="step"><div class="num">1</div><div><h3>Apresente o valor</h3><p>Mostre distorções ópticas, tratamentos, refrações, cores e benefícios de forma didática.</p></div></div>
+            <div class="step"><div class="num">2</div><div><h3>Compare opções</h3><p>Coloque lentes, marcas, atributos e preços lado a lado para simplificar a escolha.</p></div></div>
+            <div class="step"><div class="num">3</div><div><h3>Padronize a venda</h3><p>Crie um processo replicável para novos vendedores, filiais e equipes maiores.</p></div></div>
           </div>
-          <button class="btn btn-dark submit" type="submit">Quero conhecer o Pupilens</button>
-          <p class="form-note">Dica: troque o número do WhatsApp no JavaScript abaixo antes de publicar.</p>
-        </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Recursos principais</div>
+          <h2>O que sua ótica ganha no atendimento.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature"><div class="icon"><img src="https://www.pupilens.com.br/wp-content/uploads/2024/03/icon5.png" alt=""></div><h3>Aplicativo intuitivo</h3><p>Usabilidade acessível e simples para toda a equipe, inclusive novos vendedores.</p></article>
+          <article class="feature"><div class="icon"><img src="https://www.pupilens.com.br/wp-content/uploads/2024/03/icon1.png" alt=""></div><h3>Apresentação encantadora</h3><p>Demonstração interativa de distorções, tratamentos, refrações, cores e espessuras.</p></article>
+          <article class="feature"><div class="icon"><img src="https://www.pupilens.com.br/wp-content/uploads/2024/03/icon3.png" alt=""></div><h3>Padronização entre lojas</h3><p>Atendimento premium e alinhado em uma ou várias unidades da rede.</p></article>
+          <article class="feature"><div class="icon"><img src="https://www.pupilens.com.br/wp-content/uploads/2024/03/icon4.png" alt=""></div><h3>Gestão de orçamentos</h3><p>Crie orçamentos e facilite o envio ao cliente, reduzindo atrito no fechamento.</p></article>
+          <article class="feature"><div class="icon"><img src="https://www.pupilens.com.br/wp-content/uploads/2024/03/icon2.png" alt=""></div><h3>Filtro de marcas</h3><p>Destaque as lentes que sua ótica quer vender e personalize a experiência.</p></article>
+          <article class="feature"><div class="icon"><img src="https://www.pupilens.com.br/wp-content/uploads/2024/03/Logo-Pupilens-azul-150x150.png" alt=""></div><h3>Integração com Kero Ótica</h3><p>Mais agilidade para orçamento, clientes, vendas e rotina comercial.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Antes e depois</div>
+          <h2>Quando o cliente entende, ele para de comprar só pelo preço.</h2>
+          <p>A experiência visual reduz objeções, aumenta confiança e ajuda o vendedor a construir valor agregado sem parecer insistente.</p>
+        </div>
+        <div class="compare">
+          <div class="compare-col"><h3>No atendimento comum</h3><ul class="list"><li><span class="x">×</span>Explicações longas e pouco visuais.</li><li><span class="x">×</span>Cliente não percebe diferença entre lentes.</li><li><span class="x">×</span>Medo de oferecer produtos melhores.</li><li><span class="x">×</span>Venda baseada em desconto.</li></ul></div>
+          <div class="compare-col good"><h3>Com o Pupilens</h3><ul class="list"><li><span class="check">✓</span>Valor apresentado de forma clara.</li><li><span class="check">✓</span>Cliente compara e entende o investimento.</li><li><span class="check">✓</span>Vendedor ganha confiança na abordagem.</li><li><span class="check">✓</span>Venda consultiva e padronizada.</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resultado" class="section section-white">
+      <div class="container">
+        <div class="section-head"><div class="kicker">Prova de valor</div><h2>Resultado nasce quando tecnologia vira processo de venda.</h2><p>Com demonstração visual e uma narrativa mais consultiva, a ótica aumenta a percepção de valor e facilita a decisão por soluções melhores.</p></div>
+        <div class="metrics">
+          <div class="metric"><strong>65%</strong><span>mais conversões em vendas</span><p>Promessa institucional do demonstrativo Pupilens.</p></div>
+          <div class="metric"><strong>3x</strong><span>mais pares premium</span><p>Case apresentado: de 6 para 18 pares em lente de maior ticket.</p></div>
+          <div class="metric"><strong>1</strong><span>padrão para toda equipe</span><p>Mais previsibilidade em uma ou várias lojas.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container objection">
+        <div class="visual-card"><img src="https://www.pupilens.com.br/wp-content/uploads/2024/03/Simbolo-Salmao.png" alt="Símbolo Pupilens"></div>
+        <div>
+          <div class="kicker">Objeção comum</div>
+          <h2>“Mas eu já tenho equipamentos na loja...”</h2>
+          <p>Equipamentos são importantes, mas muitas vezes entram apenas no fim do atendimento. O Pupilens entra durante a conversa, no balcão, ajudando o vendedor a construir valor antes da decisão de compra.</p>
+          <p class="quote">Não é sobre substituir tecnologia. É sobre colocar tecnologia no momento certo da venda.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="section section-white">
+      <div class="container final-cta">
+        <div>
+          <div class="kicker">Próximo passo</div>
+          <h2>Sua ótica pronta para vender mais, melhor e com mais valor percebido.</h2>
+          <p>Conheça o Pupilens e veja como transformar o atendimento em uma experiência visual, consultiva e vendedora.</p>
+          <ul class="list" style="margin-top:22px"><li><span class="check">✓</span>Demonstração sem compromisso</li><li><span class="check">✓</span>Apresentação personalizada</li><li><span class="check">✓</span>Ideal para óticas de todos os tamanhos</li></ul>
+        </div>
+        <div class="form-card">
+          <h3 style="margin:0 0 8px;color:var(--blue-900);font-size:1.45rem;letter-spacing:-.04em">Fale com um consultor</h3>
+          <p style="margin:0 0 20px;color:var(--muted);font-weight:600">Preencha seus dados e conheça o Pupilens.</p>
+          <form class="fields" onsubmit="sendLead(event)">
+            <input name="nome" placeholder="Nome" required>
+            <input name="whatsapp" placeholder="WhatsApp" required>
+            <input name="otica" placeholder="Nome da ótica" required>
+            <select name="lojas"><option value="">Quantidade de lojas</option><option>1 loja</option><option>2 a 5 lojas</option><option>6 ou mais lojas</option></select>
+            <button class="cta" type="submit">Quero conhecer o Pupilens</button>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <span>© Pupilens. Todos os direitos reservados.</span>
-      <span>Política de privacidade · Termos de uso</span>
-    </div>
-  </footer>
+  <footer class="footer"><div class="container footer-inner"><span>© 2026 Pupilens. Todos os direitos reservados.</span><span><a href="https://www.pupilens.com.br/sobre-nos/">Sobre nós</a> · <a href="https://www.pupilens.com.br/contato/">Contato</a></span></div></footer>
 
   <script>
-    const WHATSAPP_NUMBER = "5500000000000"; // Troque pelo número comercial com DDI + DDD. Ex.: 5541999999999
-
-    document.getElementById("leadForm").addEventListener("submit", function(event){
+    function sendLead(event){
       event.preventDefault();
-      const data = new FormData(event.currentTarget);
-      const texto = `Olá! Quero conhecer o Pupilens.%0A%0A` +
-        `Nome: ${encodeURIComponent(data.get("nome") || "")}%0A` +
-        `WhatsApp: ${encodeURIComponent(data.get("whatsapp") || "")}%0A` +
-        `Ótica: ${encodeURIComponent(data.get("otica") || "")}%0A` +
-        `Cidade/Estado: ${encodeURIComponent(data.get("cidade") || "")}%0A` +
-        `Quantidade de lojas: ${encodeURIComponent(data.get("lojas") || "")}%0A` +
-        `Usa Kero Ótica: ${encodeURIComponent(data.get("kero") || "")}%0A` +
-        `Mensagem: ${encodeURIComponent(data.get("mensagem") || "")}`;
-
-      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${texto}`, "_blank");
-    });
+      const data = new FormData(event.target);
+      const txt = `Olá! Quero conhecer o Pupilens.%0A%0ANome: ${encodeURIComponent(data.get('nome'))}%0AWhatsApp: ${encodeURIComponent(data.get('whatsapp'))}%0AÓtica: ${encodeURIComponent(data.get('otica'))}%0AQuantidade de lojas: ${encodeURIComponent(data.get('lojas') || 'Não informado')}`;
+      window.open(`https://demo.pupilens.com.br/demonstrativo-de-lentes?lead=${txt}`, '_blank');
+    }
   </script>
 </body>
 </html>
